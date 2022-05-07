@@ -15,6 +15,9 @@ repositories {
 }
 
 dependencies {
+    //use micronaut serialization vs jackson
+    annotationProcessor("io.micronaut.serde:micronaut-serde-processor:1.0.2-SNAPSHOT")
+
     kapt("io.micronaut:micronaut-http-validation")
     kapt("io.micronaut.openapi:micronaut-openapi")
     kapt("io.micronaut.serde:micronaut-serde-processor")

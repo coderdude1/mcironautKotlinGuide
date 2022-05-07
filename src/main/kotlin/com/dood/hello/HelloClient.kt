@@ -9,7 +9,7 @@ import org.reactivestreams.Publisher
 @Client("/hello")
 interface HelloClient {
 
-    @Get(consumes = [MediaType.TEXT_PLAIN])//by default inherits the /hello.  can override
+    @Get(consumes = [MediaType.APPLICATION_JSON])//by default inherits the /hello.  can override
     @SingleResult
-    fun hello(): Publisher<String> //reactive
+    fun hello(): Publisher<HelloResponse> //reactive, note we are hitting a non-reactive endpoint
 }

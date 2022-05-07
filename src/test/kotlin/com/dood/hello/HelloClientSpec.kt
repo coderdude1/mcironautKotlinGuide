@@ -9,7 +9,7 @@ import reactor.core.publisher.Mono
 @MicronautTest
 class HelloReactiveClientSpec(@Client("/") private val client: HelloClient) : FunSpec({
     test("happy path test") {
-        val rsp = Mono.from(client.hello()).block()
-        rsp shouldBe "Hello World"
+        val rsp = Mono.from(client.hello()).block() //block makes it non-reactive even tho hello returns Publisher
+        rsp?.response shouldBe "Hello World"
     }
 })
