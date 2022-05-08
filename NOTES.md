@@ -17,5 +17,7 @@ running them all they fail due to
 
 and https://micronaut-projects.github.io/micronaut-serialization/snapshot/guide/#quickStart
 
+Switching to `@Serdable` on the HelloResponse seems to work?
+
 Not sure why the response properly serializes with each test by itself and fails without. I added the @JsonCreator per
 the docs, thinking I need to do something else
