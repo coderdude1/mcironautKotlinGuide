@@ -10,6 +10,8 @@ version = "0.1"
 group = "com.dood"
 
 val kotlinVersion = project.properties.get("kotlinVersion")
+val kotlinCoroutinesVersion = project.properties.get("kotlinCoroutinesVersion")
+
 repositories {
     mavenCentral()
 }
@@ -34,7 +36,9 @@ dependencies {
     implementation("jakarta.annotation:jakarta.annotation-api")
     implementation("org.jetbrains.kotlin:kotlin-reflect:${kotlinVersion}")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:${kotlinVersion}")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:${kotlinCoroutinesVersion}")
     runtimeOnly("org.slf4j:slf4j-simple")
+
     implementation("io.micronaut:micronaut-validation")
 
     runtimeOnly("com.fasterxml.jackson.module:jackson-module-kotlin")

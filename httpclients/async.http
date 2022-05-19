@@ -1,0 +1,25 @@
+###
+GET http://localhost/hello
+
+### Look in the micronaut logs to verify thread
+GET http://localhost:8080/async/blockingnodelay
+
+###
+GET http://localhost:8080/async/blocking
+
+###
+GET http://localhost:8080/async/executeon
+
+###
+GET http://localhost:8080/async/nonblockingdelayed
+
+###
+GET http://localhost:8080/async/nonblockingsleep
+
+<> 2022-05-18T165455.200.json
+<> 2022-05-18T082548.200.json
+<> 2022-05-17T220645.200.json
+<> 2022-05-17T205806.200.json
+<> 2022-05-17T205657.500.json
+<> 2022-05-17T205512.500.json
+<> 2022-05-17T200830.500.json
