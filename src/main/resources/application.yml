@@ -11,3 +11,9 @@ netty:
   default:
     allocator:
       max-order: 3
+endpoints:
+  all:
+    sensitive: false #dangerous in real life, this disables security for all
+  env:
+    enabled: true
+    sensitive: false

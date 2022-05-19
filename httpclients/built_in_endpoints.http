@@ -1,0 +1,5 @@
+###
+GET http://localhost:8080/info
+
+###
+GET http://localhost:8080/env
