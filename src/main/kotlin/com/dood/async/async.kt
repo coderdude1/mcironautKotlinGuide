@@ -26,7 +26,6 @@ class AsyncController(val asyncService: AsyncService) {
     private val logger = LoggerFactory.getLogger(javaClass)
     private val fibonacciLimit = 1000
 
-
     @Get(
         "/blockingnodelay",
         produces = [MediaType.APPLICATION_JSON]
@@ -63,6 +62,7 @@ class AsyncController(val asyncService: AsyncService) {
         "nonblocking",
         produces = [MediaType.APPLICATION_JSON]
     )
+
     suspend fun nonblocking(): AsyncResponse {
         logger.info("GET suspend blocking called but call is handled by event loop not worker thread")
         return AsyncResponse("GET nonblocking but not threaded off", Instant.now())
